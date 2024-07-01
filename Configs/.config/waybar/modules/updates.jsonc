@@ -1,10 +1,11 @@
     "custom/updates": {
-        "exec": "systemupdate.sh",
+        "exec": "sh ~/.local/share/bin/systemupdate.sh",
         "return-type": "json",
         "format": "{}",
         "rotate": ${r_deg},
-        "on-click": "hyprctl dispatch exec 'systemupdate.sh up'",
+        "on-click": "sh ~/.local/share/bin/systemupdate.sh up",
         "interval": 86400, // once every day
         "tooltip": true,
         "signal": 20,
     },
+

@@ -1,9 +1,10 @@
 * {
     border: none;
     border-radius: 0px;
-    font-family: "JetBrainsMono Nerd Font";
+    font-family: "CaskaydiaCove Nerd Font";
     font-weight: bold;
-    font-size: ${s_fontpx}px;
+    /* font-size: ${s_fontpx}px; */
+    font-size: 14px;
     min-height: 10px;
 }
 
@@ -84,14 +85,6 @@ tooltip {
     color: @wb-hvr-color;
     animation: tb_hover 20s ease-in-out 1;
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-}
-
-#tray menu * {
-    min-height: 16px
-}
-
-#tray menu separator {
-    min-height: 10px
 }
 
 ${modules_ls}

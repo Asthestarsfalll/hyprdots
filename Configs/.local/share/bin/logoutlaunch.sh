@@ -54,7 +54,7 @@ export fntSize=$(( y_mon * 2 / 100 ))
 
 #// detect wallpaper brightness
 
-[ -f "${cacheDir}/wall.dcol" ] && source "${cacheDir}/wall.dcol"
+source "${cacheDir}/wall.dcol"
 [ "${dcol_mode}" == "dark" ] && export BtnCol="white" || export BtnCol="black"
 
 

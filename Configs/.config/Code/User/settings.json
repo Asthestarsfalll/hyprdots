@@ -1,18 +1,94 @@
 {
-    "workbench.colorTheme": "Catppuccin Mocha",
-    "window.menuBarVisibility": "toggle",
-    "editor.fontSize": 12,
-    "editor.scrollbar.vertical": "hidden",
-    "editor.scrollbar.verticalScrollbarSize": 0,
-    "security.workspace.trust.untrustedFiles": "newWindow",
-    "security.workspace.trust.startupPrompt": "never",
-    "security.workspace.trust.enabled": false,
-    "editor.minimap.side": "left",
-    "editor.fontFamily": "'Maple Mono', 'monospace', monospace",
-    "extensions.autoUpdate": false,
-    "workbench.statusBar.visible": false,
-    "terminal.external.linuxExec": "kitty",
-    "terminal.explorerKind": "both",
-    "terminal.sourceControlRepositoriesKind": "both",
-    "telemetry.telemetryLevel": "off"
+  "workbench.colorTheme": "Rosé Pine",
+  "workbench.iconTheme": "rose-pine-icons",
+  "editor.fontFamily": "'CaskaydiaCove Nerd Font'",
+  "editor.fontLigatures": false,
+  "explorer.confirmDelete": false,
+  "editor.fontSize": 16,
+  "terminal.integrated.fontSize": 16,
+  "editor.minimap.sectionHeaderFontSize": 12,
+  "window.menuBarVisibility": "toggle",
+  "security.workspace.trust.enabled": false,
+  "terminal.external.linuxExec": "kitty",
+  "terminal.explorerKind": "both",
+  "editor.lineNumbers": "relative",
+  "files.exclude": {
+    "**/.trunk/*actions/": true,
+    "**/.trunk/*logs/": true,
+    "**/.trunk/*notifications/": true,
+    "**/.trunk/*out/": true,
+    "**/.trunk/*plugins/": true
+  },
+  "files.watcherExclude": {
+    "**/.trunk/*actions/": true,
+    "**/.trunk/*logs/": true,
+    "**/.trunk/*notifications/": true,
+    "**/.trunk/*out/": true,
+    "**/.trunk/*plugins/": true
+  },
+  "terminal.integrated.inheritEnv": false,
+  "glassit.alpha": 220,
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "python.defaultInterpreterPath": "/home/czh/.conda/envs/paddlefx/bin/python",
+  "editor.tokenColorCustomizations": {
+    "[*Light*]": {
+      "textMateRules": [
+        {
+          "scope": "ref.matchtext",
+          "settings": {
+            "foreground": "#000"
+          }
+        }
+      ]
+    },
+    "[*Dark*]": {
+      "textMateRules": [
+        {
+          "scope": "ref.matchtext",
+          "settings": {
+            "foreground": "#fff"
+          }
+        }
+      ]
+    },
+    "textMateRules": [
+      {
+        "name": "One Dark italic",
+        "scope": [
+          "comment",
+          "entity.other.attribute-name",
+          "keyword",
+          "markup.underline.link",
+          "storage.modifier",
+          "storage.type",
+          "string.url",
+          "variable.language.super",
+          "variable.language.this"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "name": "One Dark italic reset",
+        "scope": [
+          "keyword.operator",
+          "keyword.other.type",
+          "storage.modifier.import",
+          "storage.modifier.package",
+          "storage.type.built-in",
+          "storage.type.function.arrow",
+          "storage.type.generic",
+          "storage.type.java",
+          "storage.type.primitive"
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
+  },
+  "workbench.settings.applyToAllProfiles": []
 }
