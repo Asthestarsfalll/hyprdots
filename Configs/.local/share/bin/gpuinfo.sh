@@ -212,7 +212,7 @@ fi
   power_limit="${gpu_data[5]// /}"
 }
 
-amd_GPU() { #? Function to query amd GPU
+amd_GPU() { #? Funtion to query amd GPU
   primary_gpu="AMD ${amd_gpu}"
     # Execute the AMD GPU Python script and use its output
   amd_output=$(python3 ${scrDir}/amdgpu.py)
@@ -252,7 +252,11 @@ echo -e "Sensor: ${next_prioGPU} GPU" | sed 's/_flag//g'
 gpu_flags=$(grep "flag=1" "${gpuQ}" | cut -d '=' -f 1 | tr '\n' ' ' | tr -d '#')
 cat << EOF
 
+<<<<<<< HEAD
 Available GPU: ${gpu_flags//_flag/}
+=======
+Avalable GPU: ${gpu_flags//_flag/}
+>>>>>>> 764b8bb (.)
 [options]
 --toggle         * Toggle available GPU
 --use [GPU]      * Only call the specified GPU (Useful for adding specific GPU on waybar)

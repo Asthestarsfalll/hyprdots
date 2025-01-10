@@ -58,7 +58,6 @@ create a file named $keycodeFile and use the following format:
 
     "number": "display name/symbol",
     "61": "/",
-
 HELP
 }
 
@@ -235,11 +234,11 @@ def arg_mapping: { #! Do not Change this used for Demo only... As this will chan
 
     def description_mapping: {  #? Derived from dispatcher and Gives Description for Dispatchers; Basically translates dispatcher.
     "movefocus": "Move Focus",
-    "resizeactive": "Resize Active Floating Window",
+    "resizeactive": "Resize Active Floting Window",
     "exit" : "End Hyprland Session",
     "movetoworkspacesilent" : "Silently Move to Workspace",
     "movewindow" : "Move Window",
-    "exec" : "" , #? Remove exec as executable will give the Description from separate function
+    "exec" : "" , #? Remove exec as execuatable will give the Description from separate function
     "movetoworkspace" : "Move To Workspace:",
     "workspace" : "Navigate to Workspace:",
     "togglefloating" : "Toggle Floating",
@@ -262,7 +261,7 @@ include "hyde-keybinds";
 
   #? Functions to Convert modmask into Keys, There should be a better math for this but Im lazy
   #? Also we can just map it manually too
-  def get_keys:
+  def get_keys: 
     if . == 0 then
       ""
     elif . >= 64 then
@@ -337,7 +336,7 @@ END {
 #? Format this is how the keybinds are displayed.
 DISPLAY() { awk -v kb_hint_delim="${kb_hint_delim:->}" -F '!=!' '{if ($0 ~ /=/ && $6 != "") printf "%-25s %-2s %-30s\n", $5, kb_hint_delim, $6; else if ($0 ~ /=/) printf "%-25s\n", $5; else print $0}'; }
 
-#? Extra design use for distinction
+#? Extra design use for distiction
 header="$(printf "%-35s %-1s %-20s\n" "󰌌 Keybinds" "󱧣" "Description")"
 cols=$(tput cols)
 cols=${cols:-999}
@@ -401,7 +400,7 @@ if [ -n "$run_sel" ] && [ "$(echo "$run_sel" | wc -l)" -eq 1 ]; then
   if [ "$repeat" = true ]; then
 
     while true; do
-      repeat_command=$(echo -e "Repeat" | rofi -dmenu -no-custom -p "[Enter] repeat; [ESC] exit") #? Needed a separate Rasi ? Dunno how to make; Maybe Something like confirmation rasi for buttons Yes and No then the -p will be the Question like Proceed? Repeat?
+      repeat_command=$(echo -e "Repeat" | rofi -dmenu -no-custom -p "[Enter] repeat; [ESC] exit") #? Needed a separate Rasi ? Dunno how to make; Maybe Something like comfirmation rasi for buttons Yes and No then the -p will be the Question like Proceed? Repeat?
 
       if [ "$repeat_command" = "Repeat" ]; then
         # Repeat the command here

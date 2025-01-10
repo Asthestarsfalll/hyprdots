@@ -144,5 +144,5 @@ $scrDir/wbarstylegen.sh
 
 if [ "$reload_flag" == "1" ] ; then
     killall waybar
-    waybar --config ${waybar_dir}/config.jsonc --style ${waybar_dir}/style.css > /dev/null 2>&1 &
+    waybar > /dev/null 2>&1 &
 fi

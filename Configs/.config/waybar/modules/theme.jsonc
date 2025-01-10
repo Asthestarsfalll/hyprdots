@@ -2,9 +2,9 @@
         "format": "{}",
         "rotate": ${r_deg},
         "exec": "echo ; echo 󰟡 switch theme",
-        "on-click": "themeswitch.sh -n",
-        "on-click-right": "themeswitch.sh -p",
-        "on-click-middle": "sleep 0.1 && themeselect.sh",
+        "on-click": "~/.local/share/bin/themeswitch.sh -n",
+        "on-click-right": "~/.local/share/bin/themeswitch.sh -p",
+        "on-click-middle": "sleep 0.1 && ~/.local/share/bin/themeselect.sh",
         "interval" : 86400, // once every day
         "tooltip": true
     },

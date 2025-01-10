@@ -36,7 +36,6 @@ Examples:
     $(basename "$0") -i m       # Toggle input mute
     $(basename "$0") -p spotify d 10  # Decrease Spotify volume by 10 
     $(basename "$0") -p '' d 10  # Decrease volume by 10 for all players 
-
 EOF
     exit 1
 }

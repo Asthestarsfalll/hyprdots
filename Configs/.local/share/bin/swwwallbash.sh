@@ -43,8 +43,7 @@ fn_wallbash () {
     sed '1d' "${tplt}" > "${target}"
 
     if [[ "${enableWallDcol}" -eq 2 && "${dcol_mode}" == "light" ]] || [[ "${enableWallDcol}" -eq 3 && "${dcol_mode}" == "dark" ]] ; then
-        sed -i 's/<wallbash_mode>/'"${dcol_invt}"'/g
-                s/<wallbash_pry1>/'"${dcol_pry4}"'/g
+        sed -i 's/<wallbash_pry1>/'"${dcol_pry4}"'/g
                 s/<wallbash_txt1>/'"${dcol_txt4}"'/g
                 s/<wallbash_1xa1>/'"${dcol_4xa9}"'/g
                 s/<wallbash_1xa2>/'"${dcol_4xa8}"'/g
@@ -132,9 +131,8 @@ fn_wallbash () {
                 s/<wallbash_4xa7_rgba(\([^)]*\))>/'"${dcol_1xa3_rgba}"'/g
                 s/<wallbash_4xa8_rgba(\([^)]*\))>/'"${dcol_1xa2_rgba}"'/g
                 s/<wallbash_4xa9_rgba(\([^)]*\))>/'"${dcol_1xa1_rgba}"'/g' "${target}"
-    else
-        sed -i 's/<wallbash_mode>/'"${dcol_mode}"'/g
-                s/<wallbash_pry1>/'"${dcol_pry1}"'/g
+    elif [ "${type}" == "dcol" ] ; then
+        sed -i 's/<wallbash_pry1>/'"${dcol_pry1}"'/g
                 s/<wallbash_txt1>/'"${dcol_txt1}"'/g
                 s/<wallbash_1xa1>/'"${dcol_1xa1}"'/g
                 s/<wallbash_1xa2>/'"${dcol_1xa2}"'/g
@@ -248,7 +246,7 @@ if [ "${enableWallDcol}" -eq 0 ] && [[ "${reload_flag}" -eq 1 ]] ; then
 elif [ "${enableWallDcol}" -gt 0 ] ; then
 
     echo ":: deploying wallbash colors :: ${dcol_mode} wallpaper detected"
-    find "${wallbashDir}/Wall-Dcol" -type f -name "*.dcol" | parallel fn_wallbash {}
+    find "${wallbashDir}/Wall-Dcol" -type f -name "*.dcol" | parallel fn_wallbash {} "dcol"
 
 fi
 

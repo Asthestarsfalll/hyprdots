@@ -9,8 +9,7 @@ fi
 scrDir=$(dirname "$(realpath "$0")")
 source "$scrDir/globalcontrol.sh"
 get_aurhlpr
-export -f pkg_installed
-fpk_exup="pkg_installed flatpak && flatpak update"
+fpk_exup="flatpak update"
 
 # Trigger upgrade
 if [ "$1" == "up" ] ; then
